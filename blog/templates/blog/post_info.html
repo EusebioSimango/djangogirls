@@ -2,8 +2,9 @@
 
 {% block body %}
   <div class="info">
-    <h1>{{ post.title }}</h1>
     <p class="desc">Published by <strong>{{ post.author }}</strong> at {{ post.published_date }}</p>
+    <h1>{{ post.title }}</h1>
     <p class="infoText">{{ post.text }}</p>
+    <a class="back" href="/">back</a>
   </div>
 {% endblock %}
