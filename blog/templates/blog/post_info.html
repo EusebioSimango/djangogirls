@@ -1,0 +1,9 @@
+{% extends 'blog/layout.html' %}
+
+{% block body %}
+  <div class="info">
+    <h1>{{ post.title }}</h1>
+    <p class="desc">Published by <strong>{{ post.author }}</strong> at {{ post.published_date }}</p>
+    <p class="infoText">{{ post.text }}</p>
+  </div>
+{% endblock %}
