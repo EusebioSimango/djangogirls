@@ -23,15 +23,15 @@ a {
 
 .App {
   padding: 20px;
-  display: flex;
+  display: grid;
   justify-content: space-around;
-  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
 }
 
 .post {
   cursor: pointer;
   margin-bottom: 20px;
-  width: 45%;
+  width: 90%;
   background-color: #dd640e78;
   padding: 25px;
   border-radius: 10px;
