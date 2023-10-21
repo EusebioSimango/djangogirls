@@ -17,6 +17,8 @@ def post_info(request, title, author):
 
 
 def post_new(request):
+    if  (str(request.user) == "AnonymousUser"):
+        return redirect('/admin/login/?next=/post/new')
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
@@ -27,4 +29,4 @@ def post_new(request):
             return redirect('post_list')
     else:
         form = PostForm()
-    return render(request, 'blog/post_edit.html', {'form': form})
+    return render(request, 'blog/post_edit.html', { 'form': form })
