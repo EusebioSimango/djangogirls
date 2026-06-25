@@ -14,6 +14,7 @@ def post_list(request):
 
 def post_info(request, title, author):
     post = Post.objects.filter(title=title).first()
+    print(f"Post: {post.title}")
     return render(request, 'blog/post_info.html', {'post': post})
 
 
